@@ -1,0 +1,66 @@
+.info-line {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  
+  .school-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  .left-side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .school-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .school-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .school-name {
+    color: #007BFF;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .location {
+    color: #444;
+  }
+  
+  .right-side {
+    text-align: right;
+  }
+  
+  .contact {
+    margin-bottom: 10px;
+  }
+  
+  .register-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+  }
+  
