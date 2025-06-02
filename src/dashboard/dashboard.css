@@ -1,5 +1,5 @@
 .info-line {
-    background-color: blue;
+    background-color: #5d848a;
     color: white;
     padding: 10px;
     font-weight: bold;
@@ -21,10 +21,12 @@
     align-items: center;
     gap: 15px;
   }
+
+  .left-side img{
+    width: 84px;
+  }
   
   .school-logo {
-    width: 60px;
-    height: 60px;
     object-fit: contain;
   }
   
@@ -34,7 +36,7 @@
   }
   
   .school-name {
-    color: #007BFF;
+    color: #5d848a;
     font-size: 20px;
     font-weight: bold;
   }
@@ -49,10 +51,11 @@
   
   .contact {
     margin-bottom: 10px;
+    text-align: start;
   }
   
   .register-button {
-    background-color: #007BFF;
+    background-color: #5d848a;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -61,6 +64,6 @@
   }
   
   .register-button:hover {
-    background-color: #0056b3;
+    background-color: #5d848a;
   }
   
