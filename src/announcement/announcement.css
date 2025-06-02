@@ -1,0 +1,27 @@
+.announcement-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #3c6c6e;
+    padding: 10px 0;
+    position: relative;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .announcement-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    padding-left: 40%;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
