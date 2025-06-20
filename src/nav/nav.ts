@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Nav {
 
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
 }

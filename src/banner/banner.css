@@ -1,38 +1,63 @@
 .hero-section {
-    background-image: url('/Images/School_BG.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Full viewport height */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-image: url('/Images/School_BG.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fading effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+
+/* 📱 Responsive styles for mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 80px 20px;
   }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fading effect */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hero-text {
-    color: white;
-    text-align: center;
-    z-index: 1;
-  }
-  
+
   .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
+
   .hero-text p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}

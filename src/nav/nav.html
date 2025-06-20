@@ -1,57 +1,64 @@
 <nav class="navbar">
-    <ul class="nav-menu">
-      <li><a href="#">Home</a></li>
-  
-      <li class="dropdown">
-        <a href="#">About Us</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">About SSIC</a></li>
-          <li><a href="#">Infrastructure</a></li>
-          <li><a href="#">Faculty</a></li>
-          <li><a href="#">Principal Message</a></li>
-          <li><a href="#">Transport</a></li>
-          <li><a href="#">School Prospectus</a></li>
-        </ul>
-      </li>
-  
-      <li class="dropdown">
-        <a href="#">Admission</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Admission Procedure</a></li>
-          <li><a href="#">Admission Policy</a></li>
-          <li><a href="#">Admission Form</a></li>
-          <li><a href="#">Fee Structure</a></li>
-        </ul>
-      </li>
-  
-      <li class="dropdown">
-        <a href="#">Rules and Regulations</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Guidelines for Students</a></li>
-          <li><a href="#">Syllabus</a></li>
-          <li><a href="#">Examination and Promotion</a></li>
-        </ul>
-      </li>
-  
-      <li class="dropdown">
-        <a href="#">Achievements</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Academics</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Toppers</a></li>
-        </ul>
-      </li>
-  
-      <li class="dropdown">
-        <a href="#">Gallery</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Images</a></li>
-          <li><a href="#">Videos</a></li>
-        </ul>
-      </li>
-  
-      <li><a href="#">Online Fee</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  
+  <div class="navbar-container">
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <ul class="nav-menu" [class.active]="menuOpen">
+    <li><a href="#">Home</a></li>
+
+    <li class="dropdown">
+      <a href="#">About Us</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">About SSIC</a></li>
+        <li><a href="#">Infrastructure</a></li>
+        <li><a href="#">Faculty</a></li>
+        <li><a href="#">Principal Message</a></li>
+        <li><a href="#">Transport</a></li>
+        <li><a href="#">School Prospectus</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Admission</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Admission Procedure</a></li>
+        <li><a href="#">Admission Policy</a></li>
+        <li><a href="#">Admission Form</a></li>
+        <li><a href="#">Fee Structure</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Rules and Regulations</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Guidelines for Students</a></li>
+        <li><a href="#">Syllabus</a></li>
+        <li><a href="#">Examination and Promotion</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Achievements</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Toppers</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Gallery</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Images</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Online Fee</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>

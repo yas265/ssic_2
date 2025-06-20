@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-faculty',
@@ -7,22 +7,64 @@ import { Component } from '@angular/core';
   templateUrl: './faculty.html',
   styleUrl: './faculty.css'
 })
-export class Faculty {
+export class Faculty implements OnInit{
   teamMembers = [
     {
-      name: 'Dr. Arun Yadav',
+      name: 'Mr. Arun Yadav',
       designation: 'Principal',
       image: '/Images/arr.jpg'
     },
     {
-      name: 'Mr. ABC',
-      designation: 'Vice Principal',
+      name: 'Mr. Pawan',
+      designation: 'Voice Princepal',
+      image: '/Images/pawan.jpg'
+    },
+    {
+      name: 'Mr. Arun Yadav',
+      designation: 'Principal',
       image: '/Images/arr.jpg'
     },
     {
-      name: 'Ms. XYZ',
-      designation: 'Mathematics HOD',
-      image: '/Images/arr.jpg'
+      name: 'Mr. Akhilesh',
+      designation: 'Physics HOD',
+      image: '/Images/akhilesh.jpg'
+    },
+    {
+      name: 'Mr. Pawan',
+      designation: 'Voice Princepal',
+      image: '/Images/pawan.jpg'
+    },
+    {
+      name: 'Mr. Akhilesh',
+      designation: 'Physics HOD',
+      image: '/Images/akhilesh.jpg'
     }
   ];
+
+  startIndex = 0;
+  visibleMembers: { name: string; designation: string; image: string; }[] = [];
+
+  ngOnInit() {
+    this.updateVisibleMembers();
+  }
+
+  updateVisibleMembers() {
+    this.visibleMembers = this.teamMembers.slice(this.startIndex, this.startIndex + 3);
+  }
+
+  slideRight() {
+    if (this.startIndex + 3 < this.teamMembers.length) {
+      this.startIndex++;
+      this.updateVisibleMembers();
+    }
+    console.log("ksaksjkajk");
+  }
+
+  slideLeft() {
+    if (this.startIndex > 0) {
+      this.startIndex--;
+      this.updateVisibleMembers();
+    }
+  }
+
 }

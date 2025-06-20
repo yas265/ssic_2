@@ -5,6 +5,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
+ 
   }
   
   .left-section {
@@ -14,17 +15,13 @@
     padding: 20px;
     text-align: center;
   }
-  .left-section{
-    padding: 20px;
-  }
-
-
-  .manager-border img{
+  
+  .manager-border img {
     margin: 20px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border:#3c6c6e solid;
+    border: #3c6c6e solid;
     background-color: aliceblue;
   }
   
@@ -33,11 +30,11 @@
   }
   
   .right-section {
-    width: 60%;
-    padding: 20px;
+    width: 55%;
+    padding: 20px;
     margin: 40px;
   }
-
+  
   .title {
     display: inline-block;
     padding-bottom: 5px;
@@ -46,3 +43,5 @@
     text-align: center;
     border-bottom: 3px solid #3c6c6e;
   }
+  
+ 
