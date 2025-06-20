@@ -1,18 +1,17 @@
 <div class="team-container">
-    <h2 class="team-heading">Meet Our Faculty</h2>
-  
-    <div class="slider">
-      <button class="slider-btn left-btn">&#8592;</button>
-  
-      <div class="card-container">
-        <div class="team-card" *ngFor="let member of teamMembers">
-          <img [src]="member.image" alt="{{ member.name }}" />
-          <h3>{{ member.name }}</h3>
-          <p>{{ member.designation }}</p>
-        </div>
+  <h2 class="team-heading">Meet Our Faculty</h2>
+
+  <div class="slider">
+    <button class="slider-btn left-btn" (click)="slideLeft()">&#8592;</button>
+
+    <div class="card-container">
+      <div class="team-card" *ngFor="let member of visibleMembers">
+        <img [src]="member.image" alt="{{ member.name }}" />
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.designation }}</p>
       </div>
-  
-      <button class="slider-btn right-btn">&#8594;</button>
     </div>
+
+    <button class="slider-btn right-btn" (click)="slideRight()">&#8594;</button><!--&#8594;-->
   </div>
-  
+</div>

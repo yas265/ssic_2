@@ -1,63 +1,106 @@
 .navbar {
-    background-color:#5d848a;
-    padding: 0;
-    position: sticky;      /* 🔐 Make it stay on top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
-  }
-  
-  .nav-menu {
-    list-style: none;
+  background-color: #5d848a;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+/* Hamburger (3-dot) menu button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background-color: white;
+  height: 4px;
+  width: 25px;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* Main nav menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu li a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu > li:hover {
+  background-color: #4a6f74;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #5d848a;
+  list-style: none;
+  padding: 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
     display: flex;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
   }
-  
-  .nav-menu > li {
-    position: relative;
-  }
-  
-  .nav-menu > li > a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav-menu > li:hover {
-    background-color: #5d848a;
-  }
-  
-  .dropdown-menu {
+
+  .nav-menu {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #5d848a;
-    list-style: none;
-    padding: 0;
-    min-width: 200px;
-    z-index: 1000;
-  }
-  
-  .dropdown-menu li a {
-    display: block;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  
-  .dropdown-menu li a:hover {
+    flex-direction: column;
+    width: 100%;
     background-color: #5d848a;
   }
-  
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li a {
+    padding: 12px;
+    text-align: center;
+  }
+
   .dropdown:hover .dropdown-menu {
+    position: static;
     display: block;
   }
-  
+}
