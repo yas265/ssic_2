@@ -1,0 +1,136 @@
+<h2 mat-dialog-title>Student Registration</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="registrationForm" class="form-container">
+
+    <div class="form-grid">
+      <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName">
+        <mat-error *ngIf="registrationForm.get('fullName')?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <!-- <mat-form-field appearance="outline">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="registrationForm.get('dob')?.hasError('required')">Required</mat-error>
+      </mat-form-field> -->
+
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+          <mat-option value="Other">Other</mat-option>
+        </mat-select>
+        <mat-error *ngIf="registrationForm.get('gender')?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Class</mat-label>
+        <input matInput formControlName="class">
+        <mat-error *ngIf="registrationForm.get('class')?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Section</mat-label>
+        <input matInput formControlName="section">
+        <mat-error *ngIf="registrationForm.get('section')?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Guardian Name</mat-label>
+        <input matInput formControlName="guardianName">
+        <mat-error *ngIf="registrationForm.get('guardianName')?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput formControlName="mobile">
+        <mat-error *ngIf="registrationForm.get('mobile')?.hasError('required')">Required</mat-error>
+        <mat-error *ngIf="registrationForm.get('mobile')?.hasError('pattern')">Invalid mobile number</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address" rows="3"></textarea>
+        <mat-error *ngIf="registrationForm.get('address')?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+    </div>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button color="primary" [disabled]="!registrationForm.valid" (click)="submitForm()">Submit</button>
+</mat-dialog-actions>
+
+
+
+<!-- <h2 mat-dialog-title>Student Registration</h2>
+<mat-dialog-content>
+  <form [formGroup]="registrationForm" class="form-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input matInput formControlName="fullName">
+      <mat-error *ngIf="registrationForm.get('fullName')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dob">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="registrationForm.get('dob')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+        <mat-option value="Other">Other</mat-option>
+      </mat-select>
+      <mat-error *ngIf="registrationForm.get('gender')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Class</mat-label>
+      <input matInput formControlName="class">
+      <mat-error *ngIf="registrationForm.get('class')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Section</mat-label>
+      <input matInput formControlName="section">
+      <mat-error *ngIf="registrationForm.get('section')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Guardian Name</mat-label>
+      <input matInput formControlName="guardianName">
+      <mat-error *ngIf="registrationForm.get('guardianName')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput formControlName="mobile">
+      <mat-error *ngIf="registrationForm.get('mobile')?.hasError('required')">Required</mat-error>
+      <mat-error *ngIf="registrationForm.get('mobile')?.hasError('pattern')">Invalid mobile number</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <textarea matInput formControlName="address" rows="3"></textarea>
+      <mat-error *ngIf="registrationForm.get('address')?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button color="primary" (click)="submitForm()">Submit</button>
+</mat-dialog-actions> -->
